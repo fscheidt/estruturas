@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+// ARQUIVO TEXTO
 int adiciona_dados_arquivo(char filename[]) {
   FILE *arquivo;
   // Abre o arquivo para adição
