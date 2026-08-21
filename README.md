@@ -16,6 +16,54 @@
 - alocação dinâmica
 - modularização
 
+Alocação dinâmica
+- fopen
+  - fseek (descobrir o tamanho do arquivo)
+  - malloc
+- fread
+- fclose
+
+## Leitura dos dados do produto 
+
+```c
+Produto p;
+printf("--- CADASTRO DE PRODUTO ---\n\n");
+
+// Gerar o ID 
+p.id = gerar_id();
+printf("ID gerado: %d\n", p.id);
+
+// Lê o Nome
+printf("Digite o nome do produto: ");
+fgets(p.nome, sizeof(p.nome), stdin);
+p.nome[strcspn(p.nome, "\n")] = '\0'; // Remove o Enter
+// REMOVENDO O '\n': O fgets salva o Enter na string. 
+    
+// strcspn procura onde está o '\n' e troca por '\0' (fim de string).
+p.nome[strcspn(p.nome, "\n")] = '\0';
+
+// Quantidade
+printf("Digite a quantidade em estoque: ");
+scanf("%d", &p.qtd);
+
+// Valor
+printf("Digite o valor (ex: 35.90): ");
+scanf("%f", &p.valor);
+
+printf("\nDados coletados:\n");
+printf("- ID: %d\n", p.id);
+printf("- Nome: '%s' \n", p.nome);
+printf("- Qtd: %d\n", p.qtd);
+printf("- Valor: R$ %.2f\n", p.valor);
+
+printf("\nSalvando dados em %s\n", ARQUIVO_ESTOQUE);
+if (salvar_produto(&p, ARQUIVO_ESTOQUE) == 0) {
+    printf("Sucesso!\n");
+}
+return 0;
+}
+```
+
 ## Compilador
 
 <pre>
