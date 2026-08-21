@@ -1,5 +1,23 @@
 # Estruturas de dados
 
+## Arquivos
+
+- fopen
+- fread / fwrite
+- fclose
+
+- formatação: 
+  - texto    (w)
+  - binário  (wb)
+
+### Modularização e alocação dinâmica
+
+- adicionar dados ao arquivo (ab)
+- alocação dinâmica
+- modularização
+
+## Compilador
+
 <pre>
 # Compilar
 gcc -g hello.c -o hello.app
