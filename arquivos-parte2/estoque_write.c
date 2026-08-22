@@ -8,6 +8,7 @@ int gerar_id()
   // cast para converter o formato time_t par int.
   return (int)time(NULL);
 }
+// TODO: implementar o update_produto()
 
 int salvar_produto(const Produto *produto, const char *filename)
 {

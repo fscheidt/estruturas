@@ -30,6 +30,16 @@ int size = sizeof(&produtos) / sizeof(&produtos[0]);
 printf("\n%d\n",size);
 ```
 
+## Apagar produto
+
+ID (produto a ser removido) -> 10100 (tomate)
+  procurar arquivo estoque.bin
+  SE o ID do produto atual (leitura) DIFERENTE 10100
+    ADICIONO o produto no arquivo temp.bin
+  No final:
+  - apaga o arquivo estoque.bin
+  - renomear o temp.bin para estoque.bin
+
 ## Leitura dos dados do produto 
 
 `estoque_write.c`

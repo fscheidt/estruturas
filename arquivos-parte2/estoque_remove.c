@@ -18,7 +18,6 @@ int remover_produto(int id_alvo) {
         fclose(arquivo_original);
         return 1;
     }
-
     Produto p;
     int encontrou = 0; // Flag para saber se o produto foi encontrado
 
