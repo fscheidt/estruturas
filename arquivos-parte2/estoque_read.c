@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h> // malloc, free
 #include "produto.h"
 
 // Lê o arquivo e retorna um array dinâmico
@@ -39,19 +40,27 @@ Produto* ler_produtos(const char *filename, int *quantidade_lida) {
     return array_produtos;
 }
 void imprime_estoque(Produto *produtos, int tamanho) {
+    printf("\n--- ESTOQUE ---\n");
+    if (produtos==NULL) {
+        printf("estoque vazio");
+        return;
+    }
     for(int i=0;i < tamanho; i++){
-        printf("%d %s",produtos[i].id, produtos[i].nome);
+        printf("\n%d %s %.2f %d", 
+            produtos[i].id, 
+            produtos[i].nome,
+            produtos[i].valor,
+            produtos[i].quantidade
+        );
     }
 }
 int main(){
     int quantidade_lida = 0;
     Produto *produtos = ler_produtos(ARQUIVO_ESTOQUE, &quantidade_lida);
-
+    
     imprime_estoque(produtos, quantidade_lida);
-
     //  liberar a memoria alocada pelo malloc()
     if (produtos != NULL) {
         free(produtos);
     }
-
 }

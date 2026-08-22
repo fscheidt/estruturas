@@ -23,7 +23,16 @@ Alocação dinâmica
 - fread
 - fclose
 
+## Tamanho da lista
+
+```c
+int size = sizeof(&produtos) / sizeof(&produtos[0]);
+printf("\n%d\n",size);
+```
+
 ## Leitura dos dados do produto 
+
+`estoque_write.c`
 
 ```c
 Produto p;
