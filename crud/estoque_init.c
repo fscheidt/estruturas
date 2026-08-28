@@ -41,8 +41,8 @@ void gera_arquivo_estoque() {
     printf(">> Arquivo salvo! \n\n");
 }
 
-int main() {
-    printf("Inicialização do estoque\n");
-    gera_arquivo_estoque();
-    return 0;
-}
+// int main() {
+//     printf("Inicialização do estoque\n");
+//     gera_arquivo_estoque();
+//     return 0;
+// }

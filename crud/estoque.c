@@ -2,7 +2,10 @@
 #include "produto.h"
 
 // Incluindo as funções CRUD externas
-
+#include "estoque_init.c"
+#include "estoque_find.c"
+// #include "estoque_remove.c"
+// #include "estoque_read.c"
 
 int main() {
   int opcao = -1; 
@@ -24,7 +27,8 @@ int main() {
     switch (opcao) {
       case 1:
         // Inicializa arquivo que armazena produtos
-        gera_arquivo_estoque();
+        printf("inicializando arquivo de estoque");
+        gera_arquivo_estoque(); // => localizado em estoque_init.c
         break;
       case 2:
         printf("Digite o ID do produto: ");

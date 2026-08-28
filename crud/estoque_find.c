@@ -28,21 +28,25 @@ int find_produto(int id_alvo, Produto *p) {
     return 0; // Chegou ao fim do arquivo e não encontrou
 }
 
-int main() {
-    int id_produto;
-    Produto produto;
+// TODO: 
+// - find_produto_nome()
+// - find_produto_quantidade(0)
 
-    printf("--- BUSCA PRODUTO ---\n");
-    printf("Digite o ID do produto: ");
-    scanf("%d", &id_produto);
+// int main() {
+//     int id_produto;
+//     Produto produto;
 
-    // Busca o produto
-    if (find_produto(id_produto, &produto)) {
-        printf("\nProduto encontrado!\n");
-        printf("ID: %-4d | %-20s | Qtd: %-4d | Preco: R$ %.2f\n", 
-               produto.id, produto.nome, produto.quantidade, produto.valor);
-    } else {
-        printf("\nProduto ID %d nao encontrado.\n", id_produto);
-    }
-    return 0;
-}
+//     printf("--- BUSCA PRODUTO ---\n");
+//     printf("Digite o ID do produto: ");
+//     scanf("%d", &id_produto);
+
+//     // Busca o produto
+//     if (find_produto(id_produto, &produto)) {
+//         printf("\nProduto encontrado!\n");
+//         printf("ID: %-4d | %-20s | Qtd: %-4d | Preco: R$ %.2f\n", 
+//                produto.id, produto.nome, produto.quantidade, produto.valor);
+//     } else {
+//         printf("\nProduto ID %d nao encontrado.\n", id_produto);
+//     }
+//     return 0;
+// }
