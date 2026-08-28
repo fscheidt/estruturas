@@ -4,7 +4,7 @@
 #include <time.h>
 // ---------------------------------------------------------
 // - Função auxiliar para cria o arquivo estoque.bin caso
-// este não exista. 
+//   este não exista. 
 // - Inicializa o arquivo com dois produtos de exemplo
 // ---------------------------------------------------------
 int gerar_id() { return (int)time(NULL); }
@@ -28,8 +28,8 @@ void gera_arquivo_estoque() {
         printf("Erro fatal: Sem permissao de acesso para '%s'.\n", ARQUIVO_ESTOQUE);
         return;
     }
-    // Adiciona dois produtos:
-    Produto p1 = {gerar_id(), "Martelo", 15, 45.90};
+    // Cria dois produtos:
+    Produto p1 = {11, "Martelo", 15, 45.90};
     Produto p2 = {gerar_id(), "Prego de Aco (Caixa)", 50, 22.50};
 
     // Escreve produto 1 no arquivo
