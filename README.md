@@ -1,6 +1,24 @@
 # Estruturas de dados
 
-## Arquivos
+
+
+## Arquivos (Find, Update, init)
+
+Manipulação de dados (parte 2):
+- Atualização (update)
+- Busca (find)
+
+## Operações de manipulação de dados - CRUD
+
+- **Create** (estoque_write)
+- **Read**   (estoque_read e estoque_find)
+- **Update** (estoque_update)
+- **Delete** (estoque_remove)
+
+-> Cada módulo é integrado no programa principal: **estoque.c**
+
+
+## Arquivos (Write, Read, Remove)
 
 - fopen
 - fread / fwrite
@@ -9,6 +27,11 @@
 - formatação: 
   - texto    (w)
   - binário  (wb)
+
+Manipulação de dados (parte 1):
+- Criar (write)
+- Leitura (read)
+- Remover
 
 ### Modularização e alocação dinâmica
 

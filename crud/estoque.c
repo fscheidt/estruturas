@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "produto.h"
+#include "produto.h" // header
 
 // Incluindo as funções CRUD externas
 #include "estoque_init.c"

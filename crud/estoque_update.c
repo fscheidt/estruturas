@@ -40,7 +40,7 @@ int update_produto(const Produto *produto_atualizado) {
 // ---------------------------------------------------------
 int main() {
     int id_produto;
-    Produto produto;
+    Produto produto; // variavel armazena o produto lido do arquivo
 
     printf("--- BUSCA E ATUALIZA PRODUTO ---\n");
     printf("Digite o ID do produto que deseja alterar: ");
